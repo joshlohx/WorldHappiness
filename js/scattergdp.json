@@ -6,6 +6,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv"  
   },
+   "transform": [
+    {"filter": "datum.gdp_per_capita > 0"}
+  ],
   "mark": "circle",
   "encoding": {
     "x": {
