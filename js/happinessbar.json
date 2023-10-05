@@ -21,6 +21,14 @@
       "field": "happiness_score", 
       "type": "quantitative",
       "title": "Average World Happiness"
+    },
+    "color": {
+      "condition": {
+        "test": "datum.region === 'North America and ANZ'",
+        "value": "#ffff99"
+      },
+      "value": "lightgrey"
     }
   }
 }
+
