@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Scatter Plot of Happiness Score vs. GDP per Capita",
+  "title": "Bubble Chart of Happiness Score vs. GDP per Capita with Social Support",
   "width": 800,
   "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv"  
   },
-  "mark": "point",
+  "mark": "circle",
   "encoding": {
     "x": {
       "field": "gdp_per_capita",
@@ -18,16 +18,27 @@
       "type": "quantitative",
       "title": "Happiness Score"
     },
+    "size": {
+      "field": "social_support",
+      "type": "quantitative",
+      "title": "Social Support",
+      "scale": {
+        "type": "threshold",
+        "domain": [0.75, 1, 1.25, 1.5],
+        "range": [15, 50, 150, 200, 300, 400]
+      },
+      "legend": {"format": ","}
+    },
     "color": {
       "field": "region",  
       "type": "nominal",
       "title": "Region"
     },
-    "size": {"value": 70},  
     "tooltip": [
       {"field": "country", "type": "nominal", "title": "Country"},
       {"field": "gdp_per_capita", "type": "quantitative", "title": "GDP per Capita"},
-      {"field": "happiness_score", "type": "quantitative", "title": "Happiness Score"}
+      {"field": "happiness_score", "type": "quantitative", "title": "Happiness Score"},
+      {"field": "social_support", "type": "quantitative", "title": "Social Support"}
     ]
   }
 }
