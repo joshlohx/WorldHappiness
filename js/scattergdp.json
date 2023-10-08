@@ -9,6 +9,13 @@
    "transform": [
     {"filter": "datum.gdp_per_capita > 0"}
   ],
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["Continent"],
+      "bind": "legend"
+    }
+  },
   "mark": "circle",
   "encoding": {
     "x": {
@@ -23,6 +30,32 @@
       "title": "Happiness Score",
       "scale": {"domain": [1, 8.5]}
     },
+    "color": {
+      "field": "continent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+       ],  
+        "range": [
+        "#e41a1c",
+        "#984ea3",
+        "#ff7f00",
+        "#a6cee3",
+        "#377eb8",
+        "#a65628"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"selection": "continent_highlight","value": 0.6},
+      "value": 0.2
+    },
     "size": {
       "field": "social_support",
       "type": "quantitative",
@@ -34,13 +67,9 @@
       },
       "legend": {"format": ","}
     },
-    "color": {
-      "field": "region",  
-      "type": "nominal",
-      "title": "Region"
-    },
     "tooltip": [
       {"field": "country", "type": "nominal", "title": "Country"},
+      {"field": "continent", "type": "nominal", "title": "Continent"},
       {"field": "gdp_per_capita", "type": "quantitative", "title": "GDP per Capita"},
       {"field": "happiness_score", "type": "quantitative", "title": "Happiness Score"},
       {"field": "social_support", "type": "quantitative", "title": "Social Support"}
