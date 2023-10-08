@@ -12,7 +12,7 @@
   "selection": {
     "continent_highlight": {
       "type": "multi",
-      "fields": ["Continent"],
+      "fields": ["continent"],
       "bind": "legend"
     }
   },
