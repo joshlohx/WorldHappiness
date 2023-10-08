@@ -14,12 +14,14 @@
     "x": {
       "field": "gdp_per_capita",
       "type": "quantitative",
-      "title": "GDP per Capita"
+      "title": "GDP per Capita",
+      "scale": {"domain": [0.3, 2.4]}
     },
     "y": {
       "field": "happiness_score",
       "type": "quantitative",
-      "title": "Happiness Score"
+      "title": "Happiness Score",
+      "scale": {"domain": [1, 8.5]}
     },
     "size": {
       "field": "social_support",
