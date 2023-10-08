@@ -30,6 +30,32 @@
       "title": "Happiness Score",
       "scale": {"domain": [1, 8.5]}
     },
+    "color": {
+      "field": "continent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+       ],  
+        "range": [
+        "#e41a1c",
+        "#984ea3",
+        "#ff7f00",
+        "#a6cee3",
+        "#377eb8",
+        "#a65628"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"selection": "continent_highlight","value": 0.6},
+      "value": 0.2
+    },
     "size": {
       "field": "social_support",
       "type": "quantitative",
@@ -40,11 +66,6 @@
         "range": [15, 50, 150, 200, 300, 400]
       },
       "legend": {"format": ","}
-    },
-    "color": {
-      "field": "continent",  
-      "type": "nominal",
-      "title": "Continent"
     },
     "tooltip": [
       {"field": "country", "type": "nominal", "title": "Country"},
