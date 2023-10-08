@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Average World Happiness (2015-2023)",
-  "width": 800,
-  "height": 500,
+  "width": "container",
+  "height": "container",
   "data": {"url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_Combined.csv"},
   "transform": [
     {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
