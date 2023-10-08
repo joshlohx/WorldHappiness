@@ -28,6 +28,10 @@
       "type": "multi",
       "fields": ["continent"],
       "bind": "legend"
+    },
+  "opacity": {
+    "condition": {"selection": "continent_highlight", "value": 0.6},
+    "value": 0.2
     }
   },
   "encoding": {
