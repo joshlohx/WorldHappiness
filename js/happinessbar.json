@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Average World Happiness by Region",
   "width": "container",
-  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv",
     "format": {
