@@ -1,15 +1,20 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average World Happiness (2015-2023)",
-  "width": "container",
-  "data": {"url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_Combined.csv"},
-  "transform": [
-    {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
-     "groupby": ["year"]}
-  ],
-  "mark": "line",
-  "encoding": {
-    "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
-    "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Average Happiness Score", "scale": {"domain": [5.3, 5.6]}}
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average World Happiness (2015-2023)",
+    "width": "container",
+    "config": {
+        "background": "#F5F5F5"
+    },
+    "height": 256,
+    "data": {"url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_Combined.csv"},
+    "transform": [
+      {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
+       "groupby": ["year"]}
+    ],
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
+      "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Average Happiness Score", "scale": {"domain": [5.3, 5.6]}},
+      "color": {"value": "#EB3F50"}
+    }
   }
-}
