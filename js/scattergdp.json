@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Bubble Chart of Happiness Score vs. GDP per Capita",
+    "title": "Happiness Score vs. GDP per Capita",
     "width": "container",
     "config": {
         "background": "#F5F5F5"
