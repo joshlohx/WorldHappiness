@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average World Happiness by Region",
-    "width": "container",
+    "title": "Average World Happiness by Continent",
+    "width": 205,
     "config": {
         "background": "#F5F5F5"
     },
@@ -16,20 +16,24 @@
       "x": {
         "field": "continent",
         "type": "nominal",
-        "title": "Continent"
+        "title": "Continents"
       },
       "y": {
         "aggregate": "average",
         "field": "happiness_score", 
         "type": "quantitative",
-        "title": "Average World Happiness"
+        "title": "Happiness Score"
       },
       "color": {
         "condition": {
-          "test": "datum.continent === 'Oceania'",
+          "test": "datum.continent === 'Europe'",
           "value": "#EB3F50"
         },
         "value": "lightgrey"
-      }
+      },
+      "tooltip": [
+        {"field": "continent", "type": "nominal", "title": "Continent"},
+        {"field": "happiness_score", "type": "quantitative", "title": "Happiness Score", "format": ".2f"}
+      ]
     }
   }
