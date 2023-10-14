@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average World Happiness by Continent",
+    "title": "World Happiness by Continent",
     "width": 205,
     "config": {
         "background": "#F5F5F5"
