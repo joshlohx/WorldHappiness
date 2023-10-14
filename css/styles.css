@@ -2,7 +2,6 @@ body {
     background-color: white; /* Change to your desired darker gray color */
     color: #EB3F50; /* Set font color to white */
     font-family: 'Open Sans', sans-serif;   
-
 }
 
 h1 {
@@ -16,7 +15,7 @@ h1 {
     width: 850px;
     background-color: #F5F5F5;
     margin: auto;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .vis-container {
@@ -37,6 +36,10 @@ p {
     color: darkslategrey;
 }
 
+.vega-bind {
+    color: #252525
+}
+
 .description-right {
     padding-left: 20px;
 }
@@ -46,10 +49,13 @@ p {
 }
 
 .pure-g {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background-color: #F5F5F5;
-    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
 
 .pure-g1 {
     background-color: #EB3F50;
