@@ -30,25 +30,25 @@
     <!-- pure grid group -->
     <div class="pure-g1">
       <div class="centre-text">
-        <h1>World Happiness in 2023!</h1>
-        <!-- <p>blah blah blah blah blah blah blah;kjljlkjlk:!!!</p> -->
+        <h1>World Happiness and Well-Being in 2023!</h1>
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualization.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
+      <div class="pure-u-2-3">  
         <div id="vis1" class="vis-container"></div>
+            <div class = "vega-bind"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>A Global View</h2>
+          <p>Taking a step back, we can see that <FONT COLOR="#EB3F50 "><b>Oceania, Europe, North America & Asia</b></FONT> are the happiest on average. What these continents 
+            have in common is how <FONT COLOR="#EB3F50 "><b>developed</b></FONT> they are <i>(this correlation is explored later in the scatterplot!)</i>. <br><br> These scores are taken from the Gallup World Poll, which 
+            connects with over <FONT COLOR="#EB3F50 "><b>99% of the globe!</b></FONT> Participants are asked to rank their happiness on a scale of 1 to 10. 
+          </p>
+        </div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -57,10 +57,13 @@
     <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+          <h2>An Increasing Trend</h2>
+          <p>A steady increase of the global happiness score is evident <FONT COLOR="#EB3F50 "><b>from 2017 to 2022. </b></FONT>
+            What is interesting about this is that this trend <FONT COLOR="#EB3F50 "><b>persisted throughout COVID-19.</b></FONT> <br><br>
+            A possible explanation for this seemingly irrational relationship is that during the pandemic and lockdown 
+            individuals were prompted to prioritise their <FONT COLOR="#EB3F50 "><b>well-being, mental health and relationships.</b></FONT> Additionally, there was a 
+            shift of white-collar professionals to<FONT COLOR="#EB3F50 "><b> remote work.</b></FONT>
+          </p>
         </div>
       </div>
       <div class="pure-u-1-3">
@@ -77,17 +80,50 @@
     <div class="pure-g">
       <div class="pure-u-2-3">
         <div id="vis4" class="vis-container"></div>
+            <div class = "vega-bind"></div>
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>A Strong Correlation</h2>
+          <p>It is evident that GDP has a <FONT COLOR="#EB3F50 "><b>clear positive correlation</b></FONT> with happiness scores. A strong GDP per capita 
+            generally leads to improved <FONT COLOR="#EB3F50 "><b>living standards,</b></FONT> access to <FONT COLOR="#EB3F50 "><b>better healthcare, education</b></FONT> and <FONT COLOR="#EB3F50 "><b>overall prosperity.</b></FONT> <br><br>
+
+            A stark outlier present is Afghanistan. Afghanistan has <FONT COLOR="#EB3F50 "><b>over 3.5x the global's average </b></FONT>perception of corruption and is also one of the <FONT COLOR="#EB3F50 "><b>lowest GDP per 
+            capita </b></FONT>countries. 
+          </p>
         </div>
       </div>
     </div>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>A Clear Leader</h2>
+          <p>For 2023, Finland was the <FONT COLOR="#EB3F50 "><b> happiest country in the world.</b></FONT> 
+            This shouldn't come as much of a surprise though, as this 
+            is the <FONT COLOR="#EB3F50 "><b>6th year in a row</b></FONT> that Finland has earned the top spot!<br><br>
+          
+            This can likely be attributed to Finland's <FONT COLOR="#EB3F50 "><b>1st ranked</b></FONT> freedom to make life choices and <FONT COLOR="#EB3F50 "><b>2nd ranked</b></FONT> social support.  
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis5" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3" style="width: 31.5%;">
+        <div id="vis6" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation was created by Josh Loh for the FIT3179 - Data Visualisation unit at Monash University.</p>
+      </div>
+    </div>
 
   </div> <!-- end page -->
 
@@ -96,6 +132,8 @@
     var specVis2 = "js/happinessbar.json";
     var specVis3 = "js/linechart.json";
     var specVis4 = "js/scattergdp.json";
+    var specVis5 = "js/radialchart.json";
+    var specVis6 = "js/baselinebar.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false }).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -110,6 +148,14 @@
     }).catch(console.error);
 
     vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
