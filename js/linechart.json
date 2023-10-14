@@ -1,20 +1,53 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average World Happiness (2015-2023)",
-    "width": "container",
-    "config": {
-        "background": "#F5F5F5"
-    },
-    "height": 256,
-    "data": {"url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_Combined.csv"},
-    "transform": [
-      {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
-       "groupby": ["year"]}
-    ],
-    "mark": "line",
-    "encoding": {
-      "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
-      "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Average Happiness Score", "scale": {"domain": [5.3, 5.6]}},
-      "color": {"value": "#EB3F50"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Global World Happiness (2015-2023)",
+  "width": 165,
+  "config": {
+     "background": "#F5F5F5"
+  },
+  "height": 256,
+  "data": {"url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_Combined.csv"},
+  "transform": [
+     {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
+      "groupby": ["year"]}
+  ],
+  "layer": [
+     {
+       "mark": "line",
+       "encoding": {
+         "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
+         "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "scale": {"domain": [5.3, 5.6]}},
+         "color": {"value": "#EB3F50"}
+       }
+     },
+     {
+       "mark": {"type": "point", "filled": true, "size": 50},
+       "encoding": {
+         "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
+         "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "scale": {"domain": [5.3, 5.6]}},
+         "color": {"value": "#d60015"},
+         "tooltip": [
+          {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
+          {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "format": ".2f"}
+         ]
+       }
+     },
+     {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "text": ["6-year increasing trend!"],
+        "dx": -20,
+        "dy": -20,
+        "color": "#EB3F50",
+        "fontStyle": "bold",
+        "fontSize": 11,
+        "angle": 300
+      }
     }
-  }
+  ]
+ }
