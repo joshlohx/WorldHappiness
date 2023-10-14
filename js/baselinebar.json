@@ -121,7 +121,7 @@
             "dx": -2,
             "dy": -2,
             "x": "width",
-            "text": "Cut-off = 7.4"
+            "text": "Cut-off for Top 4 = 7.4"
           }
         }
       ]
