@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Well-Being per Continent",
+      "subtitle": "for 6 different factors!",
+      "subtitlePadding": 5
+    },
+    "width": 165,
+    "config": {
+        "background": "#F5F5F5"
+     },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv"
+    },
+    "params": [
+      {
+        "name": "selectedVariable",
+        "value": "average_healthy_life_expectancy",
+        "bind": {
+          "input": "select",
+          "options": ["average_healthy_life_expectancy", "average_gdp_per_capita", "average_social_support", "average_freedom_to_make_life_choices", "average_generosity", "average_perceptions_of_corruption"],
+          "labels": [
+            "Life Expectancy",
+            "GDP per Capita",
+            "Social Support",
+            "Freedom to make Life Choices",
+            "Generosity",
+            "Perceptions of Corruption"
+          ],
+          "name": "Well-Being Factor: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "aggregate": [
+          {"op": "average", "field": "healthy_life_expectancy", "as": "average_healthy_life_expectancy"},
+          {"op": "average", "field": "gdp_per_capita", "as": "average_gdp_per_capita"},
+          {"op": "average", "field": "social_support", "as": "average_social_support"},
+          {"op": "average", "field": "freedom_to_make_life_choices", "as": "average_freedom_to_make_life_choices"},
+          {"op": "average", "field": "generosity", "as": "average_generosity"},
+          {"op": "average", "field": "perceptions_of_corruption", "as": "average_perceptions_of_corruption"}
+        ],
+        "groupby": ["continent"]
+      },
+      {
+        "calculate": "datum[selectedVariable]",
+        "as": "selectedField"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+      },
+      {
+        "mark": {"type": "text", "radiusOffset": 32},
+        "encoding": {
+          "text": {"field": "continent", "type": "nominal"}
+        }
+      }
+    ],
+    "encoding": {
+      "theta": {"field": "selectedField", "type": "quantitative", "stack": true},
+      "radius": {"field": "selectedField", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+      "color": {"field": "continent", "type": "nominal", "legend": null, "scale": {"range": ["#FFF442", "#FFA142", "#FF3E03", "#FF4281", "#7A6BFF", "#D442FF"]}},
+      "tooltip": [
+        {"field": "continent", "title": "Continent"},
+        {"field": "selectedField", "title": "Well-Being Factor", "format": ".2f"}
+      ]
+    }
+  }
+  
