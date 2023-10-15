@@ -44,7 +44,6 @@
         "dx": -20,
         "dy": -20,
         "color": "#EB3F50",
-        "fontStyle": "bold",
         "fontSize": 11,
         "angle": 300,
         "fontWeight": "bold"
