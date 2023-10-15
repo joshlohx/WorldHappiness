@@ -6,7 +6,7 @@
     "background": "#F5F5F5"
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv",
+    "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv"
   },
   "transform": [
      {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
