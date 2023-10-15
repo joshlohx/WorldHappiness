@@ -1,39 +1,39 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "World Happiness by Continent",
-    "width": 205,
-    "config": {
-        "background": "#F5F5F5"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "World Happiness by Continent",
+  "width": 205,
+  "config": {
+    "background": "#F5F5F5"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv",
+  },
+  "transform": [
+     {"aggregate": [{"op": "mean", "field": "happiness_score", "as": "avg_happiness_score"}],
+      "groupby": ["continent"]}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "continent",
+      "type": "nominal",
+      "title": "Continents"
     },
-    "data": {
-      "url": "https://raw.githubusercontent.com/jloh56/Visualisation2/main/data/WHR_2023.csv",
-      "format": {
-        "type": "csv"
-      }
+    "y": {
+      "field": "avg_happiness_score",
+      "type": "quantitative",
+      "title": "Average Happiness Score"
     },
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "continent",
-        "type": "nominal",
-        "title": "Continents"
+    "color": {
+      "condition": {
+        "test": "datum.continent === 'Oceania'",
+        "value": "#EB3F50"
       },
-      "y": {
-        "aggregate": "average",
-        "field": "happiness_score", 
-        "type": "quantitative",
-        "title": "Happiness Score"
-      },
-      "color": {
-        "condition": {
-          "test": "datum.continent === 'Europe'",
-          "value": "#EB3F50"
-        },
-        "value": "lightgrey"
-      },
-      "tooltip": [
-        {"field": "continent", "type": "nominal", "title": "Continent"},
-        {"field": "happiness_score", "type": "quantitative", "title": "Happiness Score", "format": ".2f"}
-      ]
-    }
+      "value": "lightgrey"
+    },
+    "tooltip": [
+      {"field": "continent", "type": "nominal", "title": "Continent"},
+      {"field": "avg_happiness_score", "type": "quantitative", "title": "Average Happiness Score", "format": ".2f"}
+    ]
   }
+}
