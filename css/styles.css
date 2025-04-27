@@ -1,19 +1,19 @@
 body {
     background-color: white; /* Change to your desired darker gray color */
-    color: #3D3C3C; /* Set font color to white */
+    color: #F5F5F5; /* Set font color to white */
     font-family: 'Open Sans', sans-serif;   
 }
 
 h1 {
     font-weight: 900;
-    color: #3D3C3C;
+    color: #F5F5F5;
     font-family: 'Core Sans', sans-serif;
     justify-content: center;
 }
 
 .page {
     width: 850px;
-    background-color: #3D3C3C;
+    background-color: #F5F5F5;
     margin: auto;
     border: 2px solid black;
 }
