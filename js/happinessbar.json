@@ -27,7 +27,7 @@
     "color": {
       "condition": {
         "test": "datum.continent === 'Oceania'",
-        "value": "#EB3F50"
+        "value": "#233014"
       },
       "value": "lightgrey"
     },
