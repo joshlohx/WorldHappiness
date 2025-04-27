@@ -62,7 +62,7 @@
     "encoding": {
       "theta": {"field": "selectedField", "type": "quantitative", "stack": true},
       "radius": {"field": "selectedField", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
-      "color": {"field": "continent", "type": "nominal", "legend": null, "scale": {"range": ["#FFF442", "#FFA142", "#FF3E03", "#FF4281", "#7A6BFF", "#D442FF"]}},
+      "color": {"field": "continent", "type": "nominal", "legend": null, "scale": {"range": ["#A3C585", "#FFD166", "#EF476F", "#118AB2", "#8D6E63", "#6A994E"]}},
       "tooltip": [
         {"field": "continent", "title": "Continent"},
         {"field": "selectedField", "title": "Well-Being Factor", "format": ".2f"}
