@@ -134,7 +134,7 @@
         "type": "text",
         "align": "left",
         "baseline": "bottom",
-        "text": ["← Finland ranks the highest!"],
+        "text": ["← Finland ranks the highest"],
         "dx": -75,
         "dy": -35,
         "color": "#4CAF50",
