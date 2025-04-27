@@ -17,7 +17,7 @@
        "encoding": {
          "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
          "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "scale": {"domain": [5.3, 5.6]}},
-         "color": {"value": "#EB3F50"}
+         "color": {"value": "#233014"}
        }
      },
      {
@@ -25,7 +25,7 @@
        "encoding": {
          "x": {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
          "y": {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "scale": {"domain": [5.3, 5.6]}},
-         "color": {"value": "#d60015"},
+         "color": {"value": "#233014"},
          "tooltip": [
           {"field": "year", "type": "temporal", "title": "Year", "timeUnit": "year"},
           {"field": "avg_happiness_score", "type": "quantitative", "title": "Happiness Score", "format": ".2f"}
@@ -43,7 +43,7 @@
         "text": ["6-year increasing trend!"],
         "dx": -20,
         "dy": -20,
-        "color": "#EB3F50",
+        "color": "#4CAF50",
         "fontSize": 11,
         "angle": 300,
         "fontWeight": "bold"
