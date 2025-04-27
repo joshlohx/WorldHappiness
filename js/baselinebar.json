@@ -81,7 +81,7 @@
               "field": "happiness_score"
             },
             "color": {
-              "value": "#EB3F50"
+              "value": "#233014"
             },
             "tooltip": [
               {
@@ -137,7 +137,7 @@
         "text": ["← Finland ranks the highest!"],
         "dx": -75,
         "dy": -35,
-        "color": "#EB3F50",
+        "color": "#4CAF50",
         "fontStyle": "bold"
       }
     }
