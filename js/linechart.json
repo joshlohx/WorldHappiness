@@ -40,7 +40,7 @@
         "type": "text",
         "align": "left",
         "baseline": "bottom",
-        "text": ["6-year increasing trend!"],
+        "text": ["6-year increasing trend"],
         "dx": -20,
         "dy": -20,
         "color": "#4CAF50",
